@@ -18,6 +18,11 @@ public class VariablePrueba : MonoBehaviour
     void Start()
     {
         Debug.Log("Los objetos han arrancado");
+        int result = AddTwoNumbers(5, 8);
+        Debug.Log(result); //Dará como resultado 13.
+
+        string myMessage = CreateWelcome("Pablo Arancibia");
+        Debug.Log(myMessage);
     }
 
     // Update is called once per frame
@@ -27,12 +32,24 @@ public class VariablePrueba : MonoBehaviour
         Debug.Log(Time.time);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AddTwoNumbers();
+            AddTwoGlobalNumbers();
         }
     }
 
-    void AddTwoNumbers()
+    void AddTwoGlobalNumbers()
     {
         Debug.Log(number1 + number2);
+    }
+
+    int AddTwoNumbers(int firstNumber, int secondNumber)
+    {
+        int result = firstNumber + secondNumber;
+        return result;
+    }
+
+    string CreateWelcome (string username)
+    {
+        string message = "Bienvenidos al  curso " + username;
+        return message;
     }
 }

@@ -31,4 +31,16 @@ public class DesitionsScript : MonoBehaviour
     {
         
     }
+
+    bool EnterTheParty(int age, int money)
+    {
+        if (age >= 18 && money >= 10)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
