@@ -12,12 +12,16 @@ public class CollectionScript : MonoBehaviour
     //ARRAY
     public string[] students =  new string[] {"Geronimo", "Jose", "Pedro"};
     public string[] familyNames = new string[3]; //Se crea una lista que contiene 3 lugares de datos
+    
 
     //LIST
     public List<string> studentNames = new List<string>();
 
     //ARRAYLIST
     public ArrayList inventario = new ArrayList();
+
+    //HASHTABLE
+    public Hashtable personDetails = new Hashtable();
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +57,19 @@ public class CollectionScript : MonoBehaviour
 
         Debug.Log(inventario[1].GetType());
         Debug.Log(inventario[2].GetType());
+
+        //Agregar datos en HASHABLE
+        personDetails.Add("firstName", "Pablo");
+        personDetails.Add("lastName", "Arancibia");
+        personDetails.Add("age", "29");
+        personDetails.Add("gender", "male");
+
+        
+                      //casting: sirve para confirmar manualmente el tipo de dato
+        string name = (string)personDetails["firstName"];
+        int age = (int)personDetails["age"];
+
+        Debug.Log(name);
         
         
 
